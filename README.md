@@ -22,8 +22,8 @@ docker-predictionio
 2. ```./examples/integration-test```
 
 ### Query Data
-3. ```./examples/multi-query-handmade.sh```
-4. 
+1. ```./examples/multi-query-handmade.sh```
+2. 
 ```
 curl -H "Content-Type: application/json" -d '
 {
