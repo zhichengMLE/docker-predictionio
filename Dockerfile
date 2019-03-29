@@ -44,11 +44,15 @@ RUN apt-get install -y python-pip
 RUN pip install pytz
 RUN pip install predictionio
 
+RUN apt-get install -y python3-pip
+RUN pip3 install pytz
+RUN pip3 install predictionio datetime
+
+
 #For Spark MLlib
 RUN apt-get install -y libgfortran3 libatlas3-base libopenblas-base
 
 #PredictionIO
-
 RUN wget -O - http://archive.apache.org/dist/predictionio/0.12.1/apache-predictionio-0.12.1-bin.tar.gz | tar zx
 RUN mv PredictionIO* /PredictionIO
 
@@ -77,6 +81,8 @@ RUN sed -i "s|# HBASE_CONF_DIR=.*|HBASE_CONF_DIR=/hbase/conf|" /PredictionIO/con
 COPY hbase-site.xml /hbase/conf/
 COPY hbase-env.sh /hbase/conf/
 COPY quickstartapp quickstartapp
+
+COPY other-engines/ur /other-engines/ur
 
 #Add runit services
 COPY sv /etc/service 

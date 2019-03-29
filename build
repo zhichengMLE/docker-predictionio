@@ -1,4 +1,7 @@
 #!/bin/bash
 source helper
 
+git clone https://github.com/actionml/universal-recommender.git ./other-engines/ur
+
 docker build --pull --build-arg http_proxy="$http_proxy" --build-arg https_proxy="$https_proxy" $@ -t ${IMAGE} . 
+
