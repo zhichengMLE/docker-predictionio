@@ -20,6 +20,7 @@ docker-predictionio
 ### Train and Deploy the Model
 1. ```cd /other-engines/ur/```
 2. ```./examples/integration-test```
+3. ```pio deploy```
 
 ### Query Data
 1. ```./examples/multi-query-handmade.sh```
