@@ -23,8 +23,8 @@ docker-predictionio
 3. ```pio deploy```
 
 ### Query Data
-1. ```./examples/multi-query-handmade.sh```
-2. 
+- ```./examples/multi-query-handmade.sh```
+-  
 ```
 curl -H "Content-Type: application/json" -d '
 {
