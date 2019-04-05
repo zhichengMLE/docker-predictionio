@@ -1,1 +1,1 @@
-docker run -d -p 9000:9000 predictionio
+docker run -d -p 9000:9000 predictionio_with_universal_recommender
