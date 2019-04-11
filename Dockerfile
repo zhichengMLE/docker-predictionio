@@ -37,7 +37,7 @@ RUN mv /elasticsearch* /elasticsearch
 #HBase
 RUN wget -O - http://archive.apache.org/dist/hbase/1.2.7/hbase-1.2.7-bin.tar.gz | tar zx
 RUN mv /hbase* /hbase
-RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> /hbase/conf/hbase-env.sh
+RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> /hbase/conf/hbase-env.sh 
 
 #Python SDK
 RUN apt-get install -y python-pip
@@ -63,7 +63,7 @@ ENV PIO_HOME /PredictionIO
 ENV PATH $PATH:$PIO_HOME/bin
 
 #Download SBT
-#RUN /PredictionIO/sbt/sbt package
+#RUN /PredictionIO/sbt/sbt package 
 
 #Configuration
 RUN sed -i 's|SPARK_HOME=.*|SPARK_HOME=/spark|' /PredictionIO/conf/pio-env.sh
@@ -85,6 +85,6 @@ COPY quickstartapp quickstartapp
 COPY other-engines/ur /other-engines/ur
 
 #Add runit services
-COPY sv /etc/service
+COPY sv /etc/service 
 ARG BUILD_INFO
 LABEL BUILD_INFO=$BUILD_INFO
