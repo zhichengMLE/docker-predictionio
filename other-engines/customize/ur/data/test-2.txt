@@ -1,8 +1,0 @@
-u1,purchase,1
-u1,purchase,2
-u1,purchase,3
-u1,purchase,4
-u2,purchase,1
-u2,purchase,3
-u3,purchase,2
-u3,purchase,3
